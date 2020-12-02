@@ -29,6 +29,11 @@ vertexShader_yz(uint vertexID [[ vertex_id ]], constant YZVertex *vertexArray [[
 {
     RasterizerData out;
     out.clipSpacePosition = vertexArray[vertexID].position;
+    
+    //镜像方式1
+    //float2 texture = vertexArray[vertexID].textureCoordinate;
+    //out.textureCoordinate = float2(texture.x, 1-texture.y);
+    
     out.textureCoordinate = vertexArray[vertexID].textureCoordinate;
     return out;
 }
@@ -54,7 +59,21 @@ samplingShader_yz(RasterizerData input [[stage_in]],
         textureUV.sample(textureSampler, input.textureCoordinate).rg
         从textureUV中的纹理采集器中读取,纹理坐标对应上的RG值.(UV)
      */
-    float3 yuv = float3(textureY.sample(textureSampler, input.textureCoordinate).r, textureUV.sample(textureSampler, input.textureCoordinate).rg);
+    
+    //镜像方式2
+//    float2 texture = float2(input.textureCoordinate.x, 1-input.textureCoordinate.y);
+//    float y = textureY.sample(textureSampler, texture).r;
+//    float2 uv = textureUV.sample(textureSampler, texture).rg;
+//    float3 yuv = float3(y, uv);
+    
+    
+    float y = textureY.sample(textureSampler, input.textureCoordinate).r;
+    float2 uv = textureUV.sample(textureSampler, input.textureCoordinate).rg;
+    float3 yuv = float3(y, uv);
+    
+    
+    //default set
+    //float3 yuv = float3(textureY.sample(textureSampler, input.textureCoordinate).r, textureUV.sample(textureSampler, input.textureCoordinate).rg);
     
     //3.将YUV 转化为 RGB值.convertMatrix->matrix * (YUV + convertMatrix->offset)
     float3 rgb = convertMatrix->matrix * (yuv + convertMatrix->offset);
