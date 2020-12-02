@@ -191,7 +191,7 @@
     YZConvertMatrix matrix;
     matrix.matrix = [MetalHelper getDefaultFloat3x3Matrix];
     matrix.offset = kColorConversion601FullRangeOffset;
-    
+    matrix.mirror = YES;
     // 转换矩阵缓存区.
     self.convertMatrix = [self.mtkView.device newBufferWithBytes:&matrix length:sizeof(YZConvertMatrix) options:MTLResourceStorageModeShared];
 }

@@ -60,15 +60,13 @@ samplingShader_yz(RasterizerData input [[stage_in]],
         从textureUV中的纹理采集器中读取,纹理坐标对应上的RG值.(UV)
      */
     
-    //镜像方式2
-//    float2 texture = float2(input.textureCoordinate.x, 1-input.textureCoordinate.y);
-//    float y = textureY.sample(textureSampler, texture).r;
-//    float2 uv = textureUV.sample(textureSampler, texture).rg;
-//    float3 yuv = float3(y, uv);
+    float2 texture = input.textureCoordinate;
+    if (convertMatrix->mirror) {
+        texture = float2(input.textureCoordinate.x, 1 - input.textureCoordinate.y);
+    }
     
-    
-    float y = textureY.sample(textureSampler, input.textureCoordinate).r;
-    float2 uv = textureUV.sample(textureSampler, input.textureCoordinate).rg;
+    float y = textureY.sample(textureSampler, texture).r;
+    float2 uv = textureUV.sample(textureSampler, texture).rg;
     float3 yuv = float3(y, uv);
     
     

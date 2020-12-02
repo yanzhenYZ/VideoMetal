@@ -24,6 +24,8 @@ typedef struct {
     matrix_float3x3 matrix;
     //偏移量
     vector_float3 offset;
+    
+    bool mirror;
 } YZConvertMatrix;
 
 //顶点函数输入索引
