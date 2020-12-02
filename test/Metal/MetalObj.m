@@ -9,6 +9,7 @@
 #import "MetalObj.h"
 #import <MetalKit/MetalKit.h>
 #import "YZShaderType.h"
+#import "MetalHelper.h"
 
 @interface MetalObj ()<MTKViewDelegate>
 @property (nonatomic, weak) UIView *player;
@@ -51,7 +52,7 @@
 - (void)displayPixelBuffer:(CVPixelBufferRef)pixelBuffer {
     if (!pixelBuffer) { return; }
     OSType type = CVPixelBufferGetPixelFormatType(pixelBuffer);
-    if (type != kCVPixelFormatType_420YpCbCr8BiPlanarFullRange) {//??? kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange
+    if (type != kCVPixelFormatType_420YpCbCr8BiPlanarFullRange && type != kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange) {
         NSLog(@"not 420f");
         return;
     }
@@ -172,35 +173,14 @@
     self.numVertices = sizeof(quadVertices) / sizeof(YZVertex);
 }
 
-//只考虑固定格式 设置YUV->RGB转换的矩阵
+/**
+ 只考虑固定格式 设置YUV->RGB转换的矩阵 see T3GPUImageColorConversion.m
+ */
 - (void)_setupMatrix {
-    
-    // BT.601, which is the standard for SDTV.
-//    matrix_float3x3 kColorConversion601DefaultMatrix = (matrix_float3x3){
-//        (simd_float3){1.164,  1.164, 1.164},
-//        (simd_float3){0.0, -0.392, 2.017},
-//        (simd_float3){1.596, -0.813,   0.0},
-//    };
-    
-    // BT.601 full range
-    matrix_float3x3 kColorConversion601FullRangeMatrix = (matrix_float3x3){
-        (simd_float3){1.0,    1.0,    1.0},
-        (simd_float3){0.0,    -0.343, 1.765},
-        (simd_float3){1.4,    -0.711, 0.0},
-    };
-   
-    // BT.709, which is the standard for HDTV.
-//    matrix_float3x3 kColorConversion709DefaultMatrix[] = {
-//        (simd_float3){1.164,  1.164, 1.164},
-//        (simd_float3){0.0, -0.213, 2.112},
-//        (simd_float3){1.793, -0.533,   0.0},
-//    };
-    
     // 偏移量
     vector_float3 kColorConversion601FullRangeOffset = (vector_float3){ -(16.0/255.0), -0.5, -0.5};
-    
     YZConvertMatrix matrix;
-    matrix.matrix = kColorConversion601FullRangeMatrix;
+    matrix.matrix = [MetalHelper getDefaultFloat3x3Matrix];
     matrix.offset = kColorConversion601FullRangeOffset;
     
     // 转换矩阵缓存区.

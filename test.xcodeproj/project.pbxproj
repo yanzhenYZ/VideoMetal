@@ -40,6 +40,7 @@
 		9B8F71EA25778FFE00E37203 /* MetalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8F71E425778FFE00E37203 /* MetalViewController.m */; };
 		9B8F71EB25778FFE00E37203 /* YZShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9B8F71E525778FFE00E37203 /* YZShader.metal */; };
 		9B8F71EC25778FFE00E37203 /* MetalObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8F71E625778FFE00E37203 /* MetalObj.m */; };
+		9B8F71F52577A3E300E37203 /* MetalHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8F71F42577A3E300E37203 /* MetalHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +110,8 @@
 		9B8F71E725778FFE00E37203 /* MetalObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetalObj.h; sourceTree = "<group>"; };
 		9B8F71E825778FFE00E37203 /* MetalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetalViewController.h; sourceTree = "<group>"; };
 		9B8F71E925778FFE00E37203 /* YZShaderType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZShaderType.h; sourceTree = "<group>"; };
+		9B8F71F32577A3E300E37203 /* MetalHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetalHelper.h; sourceTree = "<group>"; };
+		9B8F71F42577A3E300E37203 /* MetalHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetalHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +212,8 @@
 		48E4D33424372232005B0A44 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				48E4D33D24372232005B0A44 /* T3GPUImageVideoCamera.h */,
+				48E4D35424372232005B0A44 /* T3GPUImageVideoCamera.m */,
 				48E4D33524372232005B0A44 /* T3GLProgram.h */,
 				48E4D33624372232005B0A44 /* T3GPUImageOutput.h */,
 				48E4D33724372232005B0A44 /* T3GPUImageTwoInputFilter.m */,
@@ -217,7 +222,6 @@
 				48E4D33A24372232005B0A44 /* T3GPUImageCropFilter.m */,
 				48E4D33B24372232005B0A44 /* T3GPUImageColorConversion.m */,
 				48E4D33C24372232005B0A44 /* T3GPUImageFramebufferCache.h */,
-				48E4D33D24372232005B0A44 /* T3GPUImageVideoCamera.h */,
 				48E4D33E24372232005B0A44 /* T3GPUImageFramebuffer.m */,
 				48E4D33F24372232005B0A44 /* T3GPUImage.h */,
 				48E4D34024372232005B0A44 /* T3GPUImageBuffer.m */,
@@ -230,7 +234,6 @@
 				48E4D35124372232005B0A44 /* T3GLProgram.m */,
 				48E4D35224372232005B0A44 /* T3GPUImageColorConversion.h */,
 				48E4D35324372232005B0A44 /* T3GPUImageCropFilter.h */,
-				48E4D35424372232005B0A44 /* T3GPUImageVideoCamera.m */,
 				48E4D35524372232005B0A44 /* T3GPUImageFramebufferCache.m */,
 				48E4D35624372232005B0A44 /* T3GPUImageUIElement.m */,
 				48E4D35724372232005B0A44 /* T3GPUImageBuffer.h */,
@@ -278,6 +281,8 @@
 				9B8F71E625778FFE00E37203 /* MetalObj.m */,
 				9B8F71E925778FFE00E37203 /* YZShaderType.h */,
 				9B8F71E525778FFE00E37203 /* YZShader.metal */,
+				9B8F71F32577A3E300E37203 /* MetalHelper.h */,
+				9B8F71F42577A3E300E37203 /* MetalHelper.m */,
 			);
 			path = Metal;
 			sourceTree = "<group>";
@@ -376,6 +381,7 @@
 				48E4D37624372233005B0A44 /* T3GPUImageBeautyFilter.m in Sources */,
 				48E4D36624372233005B0A44 /* T3GPUImageColorConversion.m in Sources */,
 				9B8F71EC25778FFE00E37203 /* MetalObj.m in Sources */,
+				9B8F71F52577A3E300E37203 /* MetalHelper.m in Sources */,
 				9B8F71EB25778FFE00E37203 /* YZShader.metal in Sources */,
 				48E4D36724372233005B0A44 /* T3GPUImageFramebuffer.m in Sources */,
 				48E4D36124372233005B0A44 /* T3LiveVideoConfiguration.m in Sources */,
