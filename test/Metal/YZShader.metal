@@ -25,7 +25,7 @@ typedef struct
 // vertex_id是顶点shader每次处理的index，用于定位当前的顶点
 // buffer表明是缓存数据，0是索引
 vertex RasterizerData
-vertexShader(uint vertexID [[ vertex_id ]], constant YZVertex *vertexArray [[ buffer(YZVertexInputIndexVertices) ]])
+vertexShader_yz(uint vertexID [[ vertex_id ]], constant YZVertex *vertexArray [[ buffer(YZVertexInputIndexVertices) ]])
 {
     RasterizerData out;
     out.clipSpacePosition = vertexArray[vertexID].position;
@@ -40,7 +40,7 @@ vertexShader(uint vertexID [[ vertex_id ]], constant YZVertex *vertexArray [[ bu
 // texture表明是纹理数据，CCFragmentTextureIndexTextureUV是索引
 // buffer表明是缓存数据， CCFragmentInputIndexMatrix是索引
 fragment float4
-samplingShader(RasterizerData input [[stage_in]],
+samplingShader_yz(RasterizerData input [[stage_in]],
                texture2d<float> textureY [[ texture(YZFragmentTextureIndexTextureY) ]],
                texture2d<float> textureUV [[ texture(YZFragmentTextureIndexTextureUV) ]],
                constant YZConvertMatrix *convertMatrix [[ buffer(YZFragmentInputIndexMatrix) ]])

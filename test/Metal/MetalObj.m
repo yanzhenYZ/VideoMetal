@@ -133,11 +133,20 @@
      newLibraryWithData:error: 从Data 中获取metal 文件
      */
     
-    id<MTLLibrary> defaultLibrary = [self.mtkView.device newDefaultLibrary];
+    NSBundle *bundle = [NSBundle bundleForClass:self.class];
+    //todo for framework
+    NSString *path = [bundle pathForResource:@"default" ofType:@"metallib"];
+    id<MTLLibrary> defaultLibrary = [self.mtkView.device newLibraryWithFile:path error:nil];
+    //bundle
+    //NSURL *pathUrl = [bundle URLForResource:@"default" withExtension:@"metallib"];
+    //id<MTLLibrary> defaultLibrary = [self.mtkView.device newLibraryWithURL:pathUrl error:nil];
+    
+    //default
+    //id<MTLLibrary> defaultLibrary = [self.mtkView.device newDefaultLibrary];
     // 顶点shader
-    id<MTLFunction> vertexFunction = [defaultLibrary newFunctionWithName:@"vertexShader"];
+    id<MTLFunction> vertexFunction = [defaultLibrary newFunctionWithName:@"vertexShader_yz"];
     // 片元shader
-    id<MTLFunction> fragmentFunction = [defaultLibrary newFunctionWithName:@"samplingShader"];
+    id<MTLFunction> fragmentFunction = [defaultLibrary newFunctionWithName:@"samplingShader_yz"];
     
     //渲染管道描述信息类
     MTLRenderPipelineDescriptor *pipelineStateDescriptor = [[MTLRenderPipelineDescriptor alloc] init];
