@@ -1,0 +1,558 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		48048096244167C200E5732B /* TTTHelpPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 48048094244167C200E5732B /* TTTHelpPlayer.m */; };
+		48D216FD231626C700258773 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D216FC231626C700258773 /* AppDelegate.m */; };
+		48D21700231626C700258773 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D216FF231626C700258773 /* ViewController.m */; };
+		48D21703231626C700258773 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48D21701231626C700258773 /* Main.storyboard */; };
+		48D21705231626C700258773 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48D21704231626C700258773 /* Assets.xcassets */; };
+		48D21708231626C700258773 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48D21706231626C700258773 /* LaunchScreen.storyboard */; };
+		48D2170B231626C700258773 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D2170A231626C700258773 /* main.m */; };
+		48E4D36024372233005B0A44 /* WSTCaptureKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E4D32C24372232005B0A44 /* WSTCaptureKit.m */; };
+		48E4D36124372233005B0A44 /* T3LiveVideoConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E4D33124372232005B0A44 /* T3LiveVideoConfiguration.m */; };
+		48E4D36224372233005B0A44 /* T3VideoCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E4D33224372232005B0A44 /* T3VideoCapture.m */; };
+		48E4D36324372233005B0A44 /* T3GPUImageTwoInputFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E4D33724372232005B0A44 /* T3GPUImageTwoInputFilter.m */; };
+		48E4D36424372233005B0A44 /* T3GPUImageFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E4D33924372232005B0A44 /* T3GPUImageFilter.m */; };
+		48E4D36524372233005B0A44 /* T3GPUImageCropFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E4D33A24372232005B0A44 /* T3GPUImageCropFilter.m */; };
+		48E4D36624372233005B0A44 /* T3GPUImageColorConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E4D33B24372232005B0A44 /* T3GPUImageColorConversion.m */; };
+		48E4D36724372233005B0A44 /* T3GPUImageFramebuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E4D33E24372232005B0A44 /* T3GPUImageFramebuffer.m */; };
+		48E4D36824372233005B0A44 /* T3GPUImageBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E4D34024372232005B0A44 /* T3GPUImageBuffer.m */; };
+		48E4D36924372233005B0A44 /* T3GPUImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E4D34424372232005B0A44 /* T3GPUImageView.m */; };
+		48E4D36A24372233005B0A44 /* T3GPUImageMovieWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E4D34524372232005B0A44 /* T3GPUImageMovieWriter.m */; };
+		48E4D36B24372233005B0A44 /* T3GPUImagePicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E4D34824372232005B0A44 /* T3GPUImagePicture.m */; };
+		48E4D36C24372233005B0A44 /* T3GPUImageContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E4D34B24372232005B0A44 /* T3GPUImageContext.m */; };
+		48E4D36D24372233005B0A44 /* T3GPUImagePicture+TextureSubimage.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E4D34C24372232005B0A44 /* T3GPUImagePicture+TextureSubimage.m */; };
+		48E4D36E24372233005B0A44 /* T3GPUImageAlphaBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E4D34F24372232005B0A44 /* T3GPUImageAlphaBlendFilter.m */; };
+		48E4D36F24372233005B0A44 /* T3GPUImageOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E4D35024372232005B0A44 /* T3GPUImageOutput.m */; };
+		48E4D37024372233005B0A44 /* T3GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E4D35124372232005B0A44 /* T3GLProgram.m */; };
+		48E4D37124372233005B0A44 /* T3GPUImageVideoCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E4D35424372232005B0A44 /* T3GPUImageVideoCamera.m */; };
+		48E4D37224372233005B0A44 /* T3GPUImageFramebufferCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E4D35524372232005B0A44 /* T3GPUImageFramebufferCache.m */; };
+		48E4D37324372233005B0A44 /* T3GPUImageUIElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E4D35624372232005B0A44 /* T3GPUImageUIElement.m */; };
+		48E4D37424372233005B0A44 /* T3GPUImageEmptyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E4D35B24372232005B0A44 /* T3GPUImageEmptyFilter.m */; };
+		48E4D37524372233005B0A44 /* T3GPUImageCuteFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E4D35E24372232005B0A44 /* T3GPUImageCuteFilter.m */; };
+		48E4D37624372233005B0A44 /* T3GPUImageBeautyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E4D35F24372232005B0A44 /* T3GPUImageBeautyFilter.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		48048094244167C200E5732B /* TTTHelpPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTHelpPlayer.m; sourceTree = "<group>"; };
+		48048095244167C200E5732B /* TTTHelpPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTHelpPlayer.h; sourceTree = "<group>"; };
+		484039C72362AB9000B64BF5 /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
+		48D216F8231626C700258773 /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		48D216FB231626C700258773 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		48D216FC231626C700258773 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		48D216FE231626C700258773 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		48D216FF231626C700258773 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		48D21702231626C700258773 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		48D21704231626C700258773 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		48D21707231626C700258773 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		48D21709231626C700258773 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48D2170A231626C700258773 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		48E4D32C24372232005B0A44 /* WSTCaptureKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTCaptureKit.m; sourceTree = "<group>"; };
+		48E4D32D24372232005B0A44 /* WSTCaptureKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSTCaptureKit.h; sourceTree = "<group>"; };
+		48E4D32F24372232005B0A44 /* T3LiveVideoConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T3LiveVideoConfiguration.h; sourceTree = "<group>"; };
+		48E4D33024372232005B0A44 /* T3VideoCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T3VideoCapture.h; sourceTree = "<group>"; };
+		48E4D33124372232005B0A44 /* T3LiveVideoConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T3LiveVideoConfiguration.m; sourceTree = "<group>"; };
+		48E4D33224372232005B0A44 /* T3VideoCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T3VideoCapture.m; sourceTree = "<group>"; };
+		48E4D33524372232005B0A44 /* T3GLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T3GLProgram.h; sourceTree = "<group>"; };
+		48E4D33624372232005B0A44 /* T3GPUImageOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T3GPUImageOutput.h; sourceTree = "<group>"; };
+		48E4D33724372232005B0A44 /* T3GPUImageTwoInputFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T3GPUImageTwoInputFilter.m; sourceTree = "<group>"; };
+		48E4D33824372232005B0A44 /* T3GPUImageAlphaBlendFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T3GPUImageAlphaBlendFilter.h; sourceTree = "<group>"; };
+		48E4D33924372232005B0A44 /* T3GPUImageFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T3GPUImageFilter.m; sourceTree = "<group>"; };
+		48E4D33A24372232005B0A44 /* T3GPUImageCropFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T3GPUImageCropFilter.m; sourceTree = "<group>"; };
+		48E4D33B24372232005B0A44 /* T3GPUImageColorConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T3GPUImageColorConversion.m; sourceTree = "<group>"; };
+		48E4D33C24372232005B0A44 /* T3GPUImageFramebufferCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T3GPUImageFramebufferCache.h; sourceTree = "<group>"; };
+		48E4D33D24372232005B0A44 /* T3GPUImageVideoCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T3GPUImageVideoCamera.h; sourceTree = "<group>"; };
+		48E4D33E24372232005B0A44 /* T3GPUImageFramebuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T3GPUImageFramebuffer.m; sourceTree = "<group>"; };
+		48E4D33F24372232005B0A44 /* T3GPUImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T3GPUImage.h; sourceTree = "<group>"; };
+		48E4D34024372232005B0A44 /* T3GPUImageBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T3GPUImageBuffer.m; sourceTree = "<group>"; };
+		48E4D34124372232005B0A44 /* T3GPUImageUIElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T3GPUImageUIElement.h; sourceTree = "<group>"; };
+		48E4D34324372232005B0A44 /* T3GPUImagePicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T3GPUImagePicture.h; sourceTree = "<group>"; };
+		48E4D34424372232005B0A44 /* T3GPUImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T3GPUImageView.m; sourceTree = "<group>"; };
+		48E4D34524372232005B0A44 /* T3GPUImageMovieWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T3GPUImageMovieWriter.m; sourceTree = "<group>"; };
+		48E4D34624372232005B0A44 /* T3GPUImageContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T3GPUImageContext.h; sourceTree = "<group>"; };
+		48E4D34724372232005B0A44 /* T3GPUImagePicture+TextureSubimage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "T3GPUImagePicture+TextureSubimage.h"; sourceTree = "<group>"; };
+		48E4D34824372232005B0A44 /* T3GPUImagePicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T3GPUImagePicture.m; sourceTree = "<group>"; };
+		48E4D34924372232005B0A44 /* T3GPUImageMovieWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T3GPUImageMovieWriter.h; sourceTree = "<group>"; };
+		48E4D34A24372232005B0A44 /* T3GPUImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T3GPUImageView.h; sourceTree = "<group>"; };
+		48E4D34B24372232005B0A44 /* T3GPUImageContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T3GPUImageContext.m; sourceTree = "<group>"; };
+		48E4D34C24372232005B0A44 /* T3GPUImagePicture+TextureSubimage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "T3GPUImagePicture+TextureSubimage.m"; sourceTree = "<group>"; };
+		48E4D34D24372232005B0A44 /* T3GPUImageFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T3GPUImageFilter.h; sourceTree = "<group>"; };
+		48E4D34E24372232005B0A44 /* T3GPUImageTwoInputFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T3GPUImageTwoInputFilter.h; sourceTree = "<group>"; };
+		48E4D34F24372232005B0A44 /* T3GPUImageAlphaBlendFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T3GPUImageAlphaBlendFilter.m; sourceTree = "<group>"; };
+		48E4D35024372232005B0A44 /* T3GPUImageOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T3GPUImageOutput.m; sourceTree = "<group>"; };
+		48E4D35124372232005B0A44 /* T3GLProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T3GLProgram.m; sourceTree = "<group>"; };
+		48E4D35224372232005B0A44 /* T3GPUImageColorConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T3GPUImageColorConversion.h; sourceTree = "<group>"; };
+		48E4D35324372232005B0A44 /* T3GPUImageCropFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T3GPUImageCropFilter.h; sourceTree = "<group>"; };
+		48E4D35424372232005B0A44 /* T3GPUImageVideoCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T3GPUImageVideoCamera.m; sourceTree = "<group>"; };
+		48E4D35524372232005B0A44 /* T3GPUImageFramebufferCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T3GPUImageFramebufferCache.m; sourceTree = "<group>"; };
+		48E4D35624372232005B0A44 /* T3GPUImageUIElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T3GPUImageUIElement.m; sourceTree = "<group>"; };
+		48E4D35724372232005B0A44 /* T3GPUImageBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T3GPUImageBuffer.h; sourceTree = "<group>"; };
+		48E4D35824372232005B0A44 /* T3GPUImageFramebuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T3GPUImageFramebuffer.h; sourceTree = "<group>"; };
+		48E4D35A24372232005B0A44 /* T3GPUImageCuteFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T3GPUImageCuteFilter.h; sourceTree = "<group>"; };
+		48E4D35B24372232005B0A44 /* T3GPUImageEmptyFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T3GPUImageEmptyFilter.m; sourceTree = "<group>"; };
+		48E4D35C24372232005B0A44 /* T3GPUImageBeautyFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T3GPUImageBeautyFilter.h; sourceTree = "<group>"; };
+		48E4D35D24372232005B0A44 /* T3GPUImageEmptyFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T3GPUImageEmptyFilter.h; sourceTree = "<group>"; };
+		48E4D35E24372232005B0A44 /* T3GPUImageCuteFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T3GPUImageCuteFilter.m; sourceTree = "<group>"; };
+		48E4D35F24372232005B0A44 /* T3GPUImageBeautyFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T3GPUImageBeautyFilter.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		48D216F5231626C700258773 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		484039C62362AB9000B64BF5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				484039C72362AB9000B64BF5 /* ReplayKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		48D216EF231626C700258773 = {
+			isa = PBXGroup;
+			children = (
+				48D216FA231626C700258773 /* test */,
+				48D216F9231626C700258773 /* Products */,
+				484039C62362AB9000B64BF5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		48D216F9231626C700258773 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				48D216F8231626C700258773 /* test.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		48D216FA231626C700258773 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				48D216FB231626C700258773 /* AppDelegate.h */,
+				48D216FC231626C700258773 /* AppDelegate.m */,
+				48D216FE231626C700258773 /* ViewController.h */,
+				48D216FF231626C700258773 /* ViewController.m */,
+				48048095244167C200E5732B /* TTTHelpPlayer.h */,
+				48048094244167C200E5732B /* TTTHelpPlayer.m */,
+				48E4D32A24372232005B0A44 /* GPU */,
+				48D21701231626C700258773 /* Main.storyboard */,
+				48D21704231626C700258773 /* Assets.xcassets */,
+				48D21706231626C700258773 /* LaunchScreen.storyboard */,
+				48D21709231626C700258773 /* Info.plist */,
+				48D2170A231626C700258773 /* main.m */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		48E4D32A24372232005B0A44 /* GPU */ = {
+			isa = PBXGroup;
+			children = (
+				48E4D32B24372232005B0A44 /* Interface */,
+				48E4D32E24372232005B0A44 /* LFLiveKit */,
+				48E4D33324372232005B0A44 /* LFGPUImage */,
+			);
+			path = GPU;
+			sourceTree = "<group>";
+		};
+		48E4D32B24372232005B0A44 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				48E4D32C24372232005B0A44 /* WSTCaptureKit.m */,
+				48E4D32D24372232005B0A44 /* WSTCaptureKit.h */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		48E4D32E24372232005B0A44 /* LFLiveKit */ = {
+			isa = PBXGroup;
+			children = (
+				48E4D33024372232005B0A44 /* T3VideoCapture.h */,
+				48E4D33224372232005B0A44 /* T3VideoCapture.m */,
+				48E4D32F24372232005B0A44 /* T3LiveVideoConfiguration.h */,
+				48E4D33124372232005B0A44 /* T3LiveVideoConfiguration.m */,
+			);
+			path = LFLiveKit;
+			sourceTree = "<group>";
+		};
+		48E4D33324372232005B0A44 /* LFGPUImage */ = {
+			isa = PBXGroup;
+			children = (
+				48E4D33424372232005B0A44 /* Source */,
+				48E4D35924372232005B0A44 /* Filter */,
+			);
+			path = LFGPUImage;
+			sourceTree = "<group>";
+		};
+		48E4D33424372232005B0A44 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				48E4D33524372232005B0A44 /* T3GLProgram.h */,
+				48E4D33624372232005B0A44 /* T3GPUImageOutput.h */,
+				48E4D33724372232005B0A44 /* T3GPUImageTwoInputFilter.m */,
+				48E4D33824372232005B0A44 /* T3GPUImageAlphaBlendFilter.h */,
+				48E4D33924372232005B0A44 /* T3GPUImageFilter.m */,
+				48E4D33A24372232005B0A44 /* T3GPUImageCropFilter.m */,
+				48E4D33B24372232005B0A44 /* T3GPUImageColorConversion.m */,
+				48E4D33C24372232005B0A44 /* T3GPUImageFramebufferCache.h */,
+				48E4D33D24372232005B0A44 /* T3GPUImageVideoCamera.h */,
+				48E4D33E24372232005B0A44 /* T3GPUImageFramebuffer.m */,
+				48E4D33F24372232005B0A44 /* T3GPUImage.h */,
+				48E4D34024372232005B0A44 /* T3GPUImageBuffer.m */,
+				48E4D34124372232005B0A44 /* T3GPUImageUIElement.h */,
+				48E4D34224372232005B0A44 /* iOS */,
+				48E4D34D24372232005B0A44 /* T3GPUImageFilter.h */,
+				48E4D34E24372232005B0A44 /* T3GPUImageTwoInputFilter.h */,
+				48E4D34F24372232005B0A44 /* T3GPUImageAlphaBlendFilter.m */,
+				48E4D35024372232005B0A44 /* T3GPUImageOutput.m */,
+				48E4D35124372232005B0A44 /* T3GLProgram.m */,
+				48E4D35224372232005B0A44 /* T3GPUImageColorConversion.h */,
+				48E4D35324372232005B0A44 /* T3GPUImageCropFilter.h */,
+				48E4D35424372232005B0A44 /* T3GPUImageVideoCamera.m */,
+				48E4D35524372232005B0A44 /* T3GPUImageFramebufferCache.m */,
+				48E4D35624372232005B0A44 /* T3GPUImageUIElement.m */,
+				48E4D35724372232005B0A44 /* T3GPUImageBuffer.h */,
+				48E4D35824372232005B0A44 /* T3GPUImageFramebuffer.h */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		48E4D34224372232005B0A44 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				48E4D34324372232005B0A44 /* T3GPUImagePicture.h */,
+				48E4D34424372232005B0A44 /* T3GPUImageView.m */,
+				48E4D34524372232005B0A44 /* T3GPUImageMovieWriter.m */,
+				48E4D34624372232005B0A44 /* T3GPUImageContext.h */,
+				48E4D34724372232005B0A44 /* T3GPUImagePicture+TextureSubimage.h */,
+				48E4D34824372232005B0A44 /* T3GPUImagePicture.m */,
+				48E4D34924372232005B0A44 /* T3GPUImageMovieWriter.h */,
+				48E4D34A24372232005B0A44 /* T3GPUImageView.h */,
+				48E4D34B24372232005B0A44 /* T3GPUImageContext.m */,
+				48E4D34C24372232005B0A44 /* T3GPUImagePicture+TextureSubimage.m */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		48E4D35924372232005B0A44 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				48E4D35A24372232005B0A44 /* T3GPUImageCuteFilter.h */,
+				48E4D35B24372232005B0A44 /* T3GPUImageEmptyFilter.m */,
+				48E4D35C24372232005B0A44 /* T3GPUImageBeautyFilter.h */,
+				48E4D35D24372232005B0A44 /* T3GPUImageEmptyFilter.h */,
+				48E4D35E24372232005B0A44 /* T3GPUImageCuteFilter.m */,
+				48E4D35F24372232005B0A44 /* T3GPUImageBeautyFilter.m */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		48D216F7231626C700258773 /* test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48D2170E231626C700258773 /* Build configuration list for PBXNativeTarget "test" */;
+			buildPhases = (
+				48D216F4231626C700258773 /* Sources */,
+				48D216F5231626C700258773 /* Frameworks */,
+				48D216F6231626C700258773 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = test;
+			productName = test;
+			productReference = 48D216F8231626C700258773 /* test.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		48D216F0231626C700258773 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = yanzhen;
+				TargetAttributes = {
+					48D216F7231626C700258773 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+				};
+			};
+			buildConfigurationList = 48D216F3231626C700258773 /* Build configuration list for PBXProject "test" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 48D216EF231626C700258773;
+			productRefGroup = 48D216F9231626C700258773 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				48D216F7231626C700258773 /* test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		48D216F6231626C700258773 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48D21708231626C700258773 /* LaunchScreen.storyboard in Resources */,
+				48D21705231626C700258773 /* Assets.xcassets in Resources */,
+				48D21703231626C700258773 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		48D216F4231626C700258773 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48E4D36B24372233005B0A44 /* T3GPUImagePicture.m in Sources */,
+				48E4D36024372233005B0A44 /* WSTCaptureKit.m in Sources */,
+				48E4D37524372233005B0A44 /* T3GPUImageCuteFilter.m in Sources */,
+				48E4D36E24372233005B0A44 /* T3GPUImageAlphaBlendFilter.m in Sources */,
+				48E4D36A24372233005B0A44 /* T3GPUImageMovieWriter.m in Sources */,
+				48E4D36424372233005B0A44 /* T3GPUImageFilter.m in Sources */,
+				48E4D37424372233005B0A44 /* T3GPUImageEmptyFilter.m in Sources */,
+				48E4D36924372233005B0A44 /* T3GPUImageView.m in Sources */,
+				48E4D37124372233005B0A44 /* T3GPUImageVideoCamera.m in Sources */,
+				48D21700231626C700258773 /* ViewController.m in Sources */,
+				48E4D36524372233005B0A44 /* T3GPUImageCropFilter.m in Sources */,
+				48E4D36F24372233005B0A44 /* T3GPUImageOutput.m in Sources */,
+				48E4D37224372233005B0A44 /* T3GPUImageFramebufferCache.m in Sources */,
+				48E4D36324372233005B0A44 /* T3GPUImageTwoInputFilter.m in Sources */,
+				48E4D37324372233005B0A44 /* T3GPUImageUIElement.m in Sources */,
+				48E4D36824372233005B0A44 /* T3GPUImageBuffer.m in Sources */,
+				48E4D36C24372233005B0A44 /* T3GPUImageContext.m in Sources */,
+				48D2170B231626C700258773 /* main.m in Sources */,
+				48D216FD231626C700258773 /* AppDelegate.m in Sources */,
+				48048096244167C200E5732B /* TTTHelpPlayer.m in Sources */,
+				48E4D37624372233005B0A44 /* T3GPUImageBeautyFilter.m in Sources */,
+				48E4D36624372233005B0A44 /* T3GPUImageColorConversion.m in Sources */,
+				48E4D36724372233005B0A44 /* T3GPUImageFramebuffer.m in Sources */,
+				48E4D36124372233005B0A44 /* T3LiveVideoConfiguration.m in Sources */,
+				48E4D36D24372233005B0A44 /* T3GPUImagePicture+TextureSubimage.m in Sources */,
+				48E4D37024372233005B0A44 /* T3GLProgram.m in Sources */,
+				48E4D36224372233005B0A44 /* T3VideoCapture.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		48D21701231626C700258773 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48D21702231626C700258773 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		48D21706231626C700258773 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48D21707231626C700258773 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		48D2170C231626C700258773 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		48D2170D231626C700258773 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		48D2170F231626C700258773 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7XP66VHL84;
+				INFOPLIST_FILE = test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.3ttech.test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		48D21710231626C700258773 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7XP66VHL84;
+				INFOPLIST_FILE = test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.3ttech.test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		48D216F3231626C700258773 /* Build configuration list for PBXProject "test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48D2170C231626C700258773 /* Debug */,
+				48D2170D231626C700258773 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48D2170E231626C700258773 /* Build configuration list for PBXNativeTarget "test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48D2170F231626C700258773 /* Debug */,
+				48D21710231626C700258773 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 48D216F0231626C700258773 /* Project object */;
+}
