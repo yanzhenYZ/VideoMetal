@@ -49,6 +49,17 @@
     [self _setupMatrix];
 }
 
+- (void)_setNewConvertMatrix:(CVPixelBufferRef)pixelBuffer {
+    vector_float3 kColorConversion601FullRangeOffset = (vector_float3){ -(16.0/255.0), -0.5, -0.5};
+    YZConvertMatrix matrix;
+    matrix.matrix = [MetalHelper getFloat3x3Matrix:pixelBuffer];
+    //matrix.matrix = [MetalHelper getDefaultFloat3x3Matrix];
+    matrix.offset = kColorConversion601FullRangeOffset;
+    
+    // 转换矩阵缓存区
+    self.convertMatrix = [self.mtkView.device newBufferWithBytes:&matrix length:sizeof(YZConvertMatrix) options:MTLResourceCPUCacheModeDefaultCache];//MTLResourceStorageModeShared
+}
+
 - (void)displayPixelBuffer:(CVPixelBufferRef)pixelBuffer {
     if (!pixelBuffer) { return; }
     OSType type = CVPixelBufferGetPixelFormatType(pixelBuffer);
@@ -58,6 +69,9 @@
     }
     
     CVPixelBufferRetain(pixelBuffer);
+    //指定buffer类型一次性_setupMatrix
+    //[self _setNewConvertMatrix:pixelBuffer];
+    
     size_t width = CVPixelBufferGetWidthOfPlane(pixelBuffer, 0);
     size_t height = CVPixelBufferGetHeightOfPlane(pixelBuffer, 0);
     

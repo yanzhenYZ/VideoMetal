@@ -21,6 +21,7 @@
 @implementation MetalViewController
 /** 
  todo
+ 1.0.5 每次设置顶点坐标
  1.0.5 旋转角度
  1.0.6 镜像
  1.0.7 根据帧类型设置矩阵
