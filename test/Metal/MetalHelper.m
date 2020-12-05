@@ -29,7 +29,18 @@ static matrix_float3x3 kYZColorConversion709DefaultMatrix = (matrix_float3x3){
    (simd_float3){1.793, -0.533,   0.0},
 };
 
+
 @implementation MetalHelper
+
++ (CGSize)getDrawableSize:(UIInterfaceOrientation)orientation size:(CGSize)size {
+    if (UIInterfaceOrientationIsPortrait(orientation) && size.width > size.height) {
+        return CGSizeMake(size.height, size.width);
+    }
+    if (UIInterfaceOrientationIsLandscape(orientation) && size.height > size.width) {
+        return CGSizeMake(size.height, size.width);
+    }
+    return size;
+}
 
 + (matrix_float3x3)getDefaultFloat3x3Matrix {
     return kYZColorConversion601FullRangeMatrix;//kCVPixelFormatType_420YpCbCr8BiPlanarFullRange

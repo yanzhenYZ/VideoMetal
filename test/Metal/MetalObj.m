@@ -12,6 +12,7 @@
 #import "MetalHelper.h"
 
 @interface MetalObj ()<MTKViewDelegate>
+@property (nonatomic, assign) UIInterfaceOrientation orientation;
 @property (nonatomic, weak) UIView *player;
 @property (nonatomic, strong) MTKView *mtkView;
 @property (nonatomic, strong) id<MTLCommandQueue> commandQueue;
@@ -42,22 +43,12 @@
 }
 
 - (void)setupView:(UIView *)view {
+    _orientation = UIApplication.sharedApplication.statusBarOrientation;
     _player = view;
     [self _setupMetal];
     [self _setupPipeline];
     [self _setupVertex];
     [self _setupMatrix];
-}
-
-- (void)_setNewConvertMatrix:(CVPixelBufferRef)pixelBuffer {
-    vector_float3 kColorConversion601FullRangeOffset = (vector_float3){ -(16.0/255.0), -0.5, -0.5};
-    YZConvertMatrix matrix;
-    matrix.matrix = [MetalHelper getFloat3x3Matrix:pixelBuffer];
-    //matrix.matrix = [MetalHelper getDefaultFloat3x3Matrix];
-    matrix.offset = kColorConversion601FullRangeOffset;
-    
-    // 转换矩阵缓存区
-    self.convertMatrix = [self.mtkView.device newBufferWithBytes:&matrix length:sizeof(YZConvertMatrix) options:MTLResourceCPUCacheModeDefaultCache];//MTLResourceStorageModeShared
 }
 
 - (void)displayPixelBuffer:(CVPixelBufferRef)pixelBuffer {
@@ -75,7 +66,7 @@
     size_t width = CVPixelBufferGetWidthOfPlane(pixelBuffer, 0);
     size_t height = CVPixelBufferGetHeightOfPlane(pixelBuffer, 0);
     
-    self.mtkView.drawableSize = CGSizeMake(width, height);
+    self.mtkView.drawableSize = [MetalHelper getDrawableSize:_orientation size:CGSizeMake(width, height)];
     
     // 像素格式:普通格式，包含一个8位规范化的无符号整数组件。
     MTLPixelFormat pixelFormat = MTLPixelFormatR8Unorm;
@@ -115,6 +106,7 @@
     }
     CVPixelBufferRelease(pixelBuffer);
     if (_textureY && _textureUV) {
+        [self _setNewVertex];
         [self.mtkView draw];
     }
 }
@@ -123,6 +115,7 @@
 
 - (void)_setupMetal {
     self.mtkView = [[MTKView alloc] initWithFrame:self.player.bounds];
+    self.mtkView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     self.mtkView.backgroundColor = UIColor.redColor;
     //和self.mtkView.drawableSize控制渲染模式
     self.mtkView.contentMode = UIViewContentModeScaleAspectFit;
@@ -177,7 +170,7 @@
 
 // 设置顶点
 - (void)_setupVertex {
-    
+    return;
     // 顶点坐标(x,y,z,w) 纹理坐标(x,y)
     // 视频全屏播放, 所以顶点大小均设置[-1,1]
     static const YZVertex quadVertices[] =
@@ -258,5 +251,69 @@
     _textureY = nil;
     _textureUV = nil;
 }
+#pragma mark - Vertex
 
+- (void)_setNewVertex {
+    
+    switch (_orientation) {
+        case UIInterfaceOrientationPortrait:
+            [self _portraitVertex];
+            break;
+        default:
+            [self _defaultVertex];
+            break;
+    }
+}
+
+- (void)_portraitVertex {
+    //顶点坐标(x,y,z,w) 纹理坐标(x,y)
+    static const YZVertex PortraitVertices[] =
+    {
+        { {  1.0, -1.0, 0.0, 1.0 },  { 1.f, 0.f } },
+        { { -1.0, -1.0, 0.0, 1.0 },  { 1.f, 1.f } },
+        { { -1.0,  1.0, 0.0, 1.0 },  { 0.f, 1.f } },
+
+        { {  1.0, -1.0, 0.0, 1.0 },  { 1.f, 0.f } },
+        { { -1.0,  1.0, 0.0, 1.0 },  { 0.f, 1.f } },
+        { {  1.0,  1.0, 0.0, 1.0 },  { 0.f, 0.f } },
+    };
+    
+    
+    
+    // 创建顶点缓存区
+    self.vertices = [self.mtkView.device newBufferWithBytes:PortraitVertices length:sizeof(PortraitVertices) options:MTLResourceCPUCacheModeDefaultCache];
+    self.numVertices = sizeof(PortraitVertices) / sizeof(YZVertex);
+}
+
+- (void)_defaultVertex {
+    //顶点坐标(x,y,z,w) 纹理坐标(x,y)
+    static const YZVertex defaultVertices[] =
+    {
+        { {  1.0, -1.0, 0.0, 1.0 },  { 1.f, 1.f } },
+        { { -1.0, -1.0, 0.0, 1.0 },  { 0.f, 1.f } },
+        { { -1.0,  1.0, 0.0, 1.0 },  { 0.f, 0.f } },
+        
+        { {  1.0, -1.0, 0.0, 1.0 },  { 1.f, 1.f } },
+        { { -1.0,  1.0, 0.0, 1.0 },  { 0.f, 0.f } },
+        { {  1.0,  1.0, 0.0, 1.0 },  { 1.f, 0.f } },
+    };
+    
+    
+    
+    // 创建顶点缓存区
+    self.vertices = [self.mtkView.device newBufferWithBytes:defaultVertices length:sizeof(defaultVertices) options:MTLResourceCPUCacheModeDefaultCache];
+    self.numVertices = sizeof(defaultVertices) / sizeof(YZVertex);
+}
+
+#pragma mark - not use
+- (void)_setNewConvertMatrix:(CVPixelBufferRef)pixelBuffer {
+    vector_float3 kColorConversion601FullRangeOffset = (vector_float3){ -(16.0/255.0), -0.5, -0.5};
+    YZConvertMatrix matrix;
+    matrix.matrix = [MetalHelper getFloat3x3Matrix:pixelBuffer];
+    //matrix.matrix = [MetalHelper getDefaultFloat3x3Matrix];
+    matrix.offset = kColorConversion601FullRangeOffset;
+    
+    // 转换矩阵缓存区
+    self.convertMatrix = [self.mtkView.device newBufferWithBytes:&matrix length:sizeof(YZConvertMatrix) options:MTLResourceCPUCacheModeDefaultCache];//MTLResourceStorageModeShared
+}
 @end

@@ -21,21 +21,19 @@
 @implementation MetalViewController
 /** 
  todo
- 1.0.5 每次设置顶点坐标
- 1.0.5 旋转角度
  1.0.6 镜像
- 1.0.7 根据帧类型设置矩阵
  
  */
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _metalObj = [[MetalObj alloc] init];
-    [_metalObj setupView:self.view];
+    
     
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    _metalObj = [[MetalObj alloc] init];
+    [_metalObj setupView:self.view];
     [self startCapture];
 }
 
